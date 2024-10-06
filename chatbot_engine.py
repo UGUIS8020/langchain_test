@@ -46,7 +46,8 @@ def create_index(force_reload: bool = False, add_new_data: bool = False) -> Vect
     Returns:
         VectorStoreIndexWrapper: The created, loaded, or updated index.
     """
-    persist_directory = "chroma_db"
+    # persist_directory = "chroma_db"
+    persist_directory = "chroma_storage"
     
     def load_and_process_documents() -> List[Document]:
         loader = DirectoryLoader("text/", glob="**/*.txt")
