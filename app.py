@@ -24,11 +24,17 @@ def respond(message, chat_history):
         return "", chat_history, history
 
 
-with gr.Blocks(css=".gradio-container {background-color: indianred}") as demo:
+with gr.Blocks(css=".gradio-container {background-color: antiquewhite}.custom-textbox { width: 100%; height: 100px; }") as demo:
 # with gr.Blocks(theme='enescakircali/Indian-Henna') as demo:
+    gr.Markdown("# 渋谷歯科技工所 自動応答BOT TEST運用中ですので反応が遅いですがご了承ください")
+    gr.Markdown("# 弊社に関すること、自家歯牙移植、歯科に関するご質問にお答えします")
+     # 連絡先情報を追加
+    gr.Markdown("""
+    ### チャットボットに関するご意見、ご要望は:070-6633-0363  **email**:shibuya8020@gmail.com    
+    """) 
     chatbot = gr.Chatbot()
     msg = gr.Textbox()
-    # clear = gr.ClearButton([msg, chatbot])   
+    # clear = gr.ClearButton([msg, chatbot]) 
 
     msg.submit(respond, [msg, chatbot], [msg, chatbot])
 
