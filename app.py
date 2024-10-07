@@ -12,6 +12,7 @@ def respond(message, chat_history):
               history.add_ai_message(ai_message)
 
         bot_message = chat(message, history, index)
+        # bot_message = chat(f"あなたは渋谷歯科技工所の代表です。渋谷正彦として回答してください。日本語で答えてください{message}", history, index)
         chat_history.append((message, bot_message))
 
     # 履歴の長さを制限
@@ -23,7 +24,8 @@ def respond(message, chat_history):
         return "", chat_history, history
 
 
-with gr.Blocks() as demo:
+with gr.Blocks(css=".gradio-container {background-color: Lightgrey}") as demo:
+# with gr.Blocks(theme='enescakircali/Indian-Henna') as demo:
     chatbot = gr.Chatbot()
     msg = gr.Textbox()
     clear = gr.ClearButton([msg, chatbot])   
