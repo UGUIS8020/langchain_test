@@ -24,9 +24,9 @@ def respond(message, chat_history):
         return "", chat_history, history
 
 
-with gr.Blocks(css=".gradio-container {background-color: antiquewhite}.custom-textbox { width: 100%; height: 100px; }") as demo:
-# with gr.Blocks(theme='enescakircali/Indian-Henna') as demo:
-    gr.Markdown("# 渋谷歯科技工所 自動応答BOT TEST運用中ですので反応が遅いですがご了承ください")
+with gr.Blocks(css=".gradio-container {background-color: antiquewhite} .custom-textbox { width: 500px; height: 100px; }") as demo:
+# with gr.Blocks(theme='enescakircali/Indian-Henna') as demo:  
+    gr.Markdown("# 渋谷歯科技工所 自動応答BOT TEST")
     gr.Markdown("# 弊社に関すること、自家歯牙移植、歯科に関するご質問にお答えします")
      # 連絡先情報を追加
     gr.Markdown("""
@@ -37,6 +37,7 @@ with gr.Blocks(css=".gradio-container {background-color: antiquewhite}.custom-te
     # clear = gr.ClearButton([msg, chatbot]) 
 
     msg.submit(respond, [msg, chatbot], [msg, chatbot])
+    gr.Markdown("# ただいまTEST運用中ですので反応が遅いですがご了承ください")
 
 index = create_index()
 
