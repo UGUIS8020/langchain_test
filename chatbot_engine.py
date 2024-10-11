@@ -95,7 +95,7 @@ def create_index(force_reload: bool = False, add_new_data: bool = False) -> Vect
 
 # インデックスの作成、読み込み、または更新
 # 既存のインデックスを使用する場合
-# index = create_index()  
+index = create_index()  
 
 # 新しいデータを追加する場合
 # index = create_index(add_new_data=True) 
