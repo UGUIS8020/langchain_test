@@ -12,7 +12,7 @@ def respond(message, chat_history):
               history.add_ai_message(ai_message)
 
         # bot_message = chat(message, history, index)
-        bot_message = chat(f"日本語で答えてください。{message}", history, index)
+        bot_message = chat(f"まずはchroma_storageから検索して答えを探して、見つからなければopenaiで回答してください。日本語で答えてください。{message}", history, index)
         chat_history.append((message, bot_message))
 
     # 履歴の長さを制限
