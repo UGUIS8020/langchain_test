@@ -37,6 +37,8 @@ with gr.Blocks(css=".gradio-container {background-color: antiquewhite} .custom-t
     # clear = gr.ClearButton([msg, chatbot]) 
 
     msg.submit(respond, [msg, chatbot], [msg, chatbot])
+
+    
     gr.Markdown("# ただいまTEST運用中ですので反応が遅いですがご了承ください")
 
 index = create_index()
