@@ -106,8 +106,8 @@ index = create_index()
 def create_tools(index: VectorStoreIndexWrapper, llm) ->List[BaseTool]:
     
     vectorstore_info = VectorStoreInfo(
-        name="test_text_code",
-        description="A collection of text documents for testing purposes.",
+        name="specialized_info_collection",
+        description="A collection of documents with specialized and professional information.",
         vectorstore=index.vectorstore,        
     )
     
